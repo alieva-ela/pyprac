@@ -1,23 +1,19 @@
 from random import *
 from turtle import *
 
-border = 300
+def stop(x, y):
+	global f
+	f = False
 
-pensize(3)
-penup()
-goto(-border/2, -border/2)
-pendown()
-
-for _ in range(4):
-	forward(border)
-	left(90)
-
-penup()
-home()
-pendown()
+f = True
 
 shape("turtle")
 pensize(3)
-while True:
+
+getscreen().onclick(stop)
+while f:
 	color(random(),random(), random())
-	circle(randrange(-60,60),randrange(200))
+	radius = randrange(-60,60)
+	circle(radius, randrange(200))
+	while not(abs(xcor()) < window_width()/2  and abs(ycor()) < window_height()/2):
+		circle(radius, randrange(23))
