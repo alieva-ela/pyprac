@@ -1,4 +1,4 @@
 # pyprac
 This is a repo of prac
 
-Add comment to READme
+В папке 06062020 файл с решением зачета 
